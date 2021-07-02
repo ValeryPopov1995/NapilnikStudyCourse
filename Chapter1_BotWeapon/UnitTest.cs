@@ -27,20 +27,14 @@ namespace NapilnikStudyCourse.Chapter1_BotWeapon
 		}
 		
 		[Test]
-		public void CheckAllSimulation()
-		{
-			var p = new Player(10);
+		public void ComplexSimulation()
+        {
+			var p = new Player(2);
 			var w = new Weapon(1, 5);
 			var b = new Bot(w);
-			
+
 			b.OnSeePlayer(p);
-			Assert.AreEqual(9, p.Health);
-		}
-		
-		[Test]
-		public void HEY_CanYouBreakIt()
-		{
-			Assert.AreEqual(9, 9);
+			Assert.AreEqual(false, p.Dead);
 		}
 	}
 }
