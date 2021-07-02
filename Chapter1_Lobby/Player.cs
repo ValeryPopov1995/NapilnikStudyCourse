@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using System;
+﻿using System;
 
 namespace NapilnikStudyCourse.Chapter1_Lobby
 {
@@ -22,9 +19,9 @@ namespace NapilnikStudyCourse.Chapter1_Lobby
 		
 		public Room CreateRoom(int maxPlayers)
 		{
-			//if (_connectedRoom != null) _connectedRoom.RemovePlayer(this);
+			if (_connectedRoom != null) _connectedRoom.RemovePlayer(this);
 			
-			//IsReady = false;
+			IsReady = false;
 			_connectedRoom = new Room(maxPlayers, this);
 			
 			return _connectedRoom;

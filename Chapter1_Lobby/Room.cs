@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System;
 
 namespace NapilnikStudyCourse.Chapter1_Lobby
@@ -10,18 +8,9 @@ namespace NapilnikStudyCourse.Chapter1_Lobby
 		public List<Player> Players {get; private set;}
 		
 		bool _gameMode = false;
-		int _maxPlayers;
 		List<string> chat = new List<string>();
 		
-		public int MaxPlayers
-		{
-			get { return _maxPlayers; }
-			private set
-			{
-				if (value <= 0) _maxPlayers = 30; // default
-				else _maxPlayers = value;
-			}
-		}
+		public int MaxPlayers {get; private set;}
 		
 		int readyPlayers
 		{
@@ -35,8 +24,12 @@ namespace NapilnikStudyCourse.Chapter1_Lobby
 		
 		public Room(int maxPlayers, Player player)
 		{
+			int defaultMaxPlayers = 30;
+			
 			Players = new List<Player>();
-			MaxPlayers = maxPlayers;
+			if (maxPlayers > 0) MaxPlayers = maxPlayers;
+			else MaxPlayers = defaultMaxPlayers;
+			
 			AddPlayer(player);
 			Console.WriteLine("room created with MaxPlayers: " + MaxPlayers);
 		}
@@ -45,7 +38,7 @@ namespace NapilnikStudyCourse.Chapter1_Lobby
 		{
 			if (readyPlayers < MaxPlayers)
 			{
-				
+				Players.Add(player);
 				return true;
 			}
 			return false;
@@ -54,10 +47,10 @@ namespace NapilnikStudyCourse.Chapter1_Lobby
 		public void RemovePlayer(Player player)
 		{
 			Players.Remove(player);
-			UpdateReadyPlayers();
+			updateReadyPlayers();
 		}
 		
-		public void UpdateReadyPlayers()
+		void updateReadyPlayers()
 		{
 			//readyPlayers == MaxPlayers ? _gameMode = true : _gameMode = false; // not work in my compilator
 			if (readyPlayers == MaxPlayers) _gameMode = true;
