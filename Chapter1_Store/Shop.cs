@@ -9,6 +9,8 @@ namespace NapilnikStudyCourse.Chapter1_Store
 		
 		public Shop(Warehouse warehouse)
 		{
+			if (warehouse == null) throw new ArgumentNullException();
+			
 			_warehouse = warehouse;
 		}
 		

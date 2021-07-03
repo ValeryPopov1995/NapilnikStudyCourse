@@ -10,7 +10,8 @@ namespace NapilnikStudyCourse.Chapter1_Store
 		
 		public void Add(Good good, int count)
 		{
-			if (count <= 0) throw new Exception("ошибка в количестве добавляемых товаров");
+			if (good == null) throw new ArgumentNullException();
+			if (count <= 0) throw new ArgumentOutOfRangeException("ошибка в количестве добавляемых товаров");
 			
 			if (_goods.ContainsKey(good)) _goods[good] += count; // TODO check working ContainsKey
 			else _goods.Add(good, count);

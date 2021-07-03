@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace NapilnikStudyCourse.Chapter1_Store
 {
@@ -14,7 +15,9 @@ namespace NapilnikStudyCourse.Chapter1_Store
 		
 		public void Add(Good good, int count)
 		{
-			if (_warehouse.IsHaveRequestingGoods(good,count)) _goods.Add(good, count);
+			if (good == null) throw new ArgumentNullException();
+			
+			if (_warehouse.HasRequestingGoods(good,count)) _goods.Add(good, count);
 			else throw new Exception("на складе нет нужного количества запрашиваемых товаров");
 		}
 		

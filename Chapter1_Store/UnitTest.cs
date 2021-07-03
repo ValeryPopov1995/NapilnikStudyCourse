@@ -28,5 +28,16 @@ namespace NapilnikStudyCourse.Chapter1_Store
 			
 			cart.ShowRequestGoods();
 		}
+		
+		[Test]
+		[ExpectedException(typeof(ArgumentNullException))]
+		public void NullArguments()
+		{
+			Good iPhone11 = new Good("iPhone 10");
+			Warehouse warehouse = new Warehouse();
+			Shop shop = new Shop(warehouse);
+			
+			warehouse.Delieve(null, 9);
+		}
 	}
 }

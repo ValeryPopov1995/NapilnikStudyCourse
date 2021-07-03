@@ -20,8 +20,10 @@ namespace NapilnikStudyCourse.Chapter1_Store
 			Console.WriteLine();
 		}
 		
-		public bool IsHaveRequestingGoods(Good good, int count)
+		public bool HasRequestingGoods(Good good, int count)
 		{
+			if (good == null) throw new ArgumentNullException();
+			
 			if (_goods.CheckGood(good, count)) return true;
 			return false;
 		}
