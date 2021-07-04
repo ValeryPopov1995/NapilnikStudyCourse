@@ -1,14 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace NapilnikStudyCourse.Chapter1_Store
 {
 	public class Warehouse
 	{
-		GoodsDictionary _goods = new GoodsDictionary();
+		private GoodsDictionary _goods = new GoodsDictionary();
 		
 		public void Delieve(Good good, int count)
 		{
+			if (good == null)
+				throw new ArgumentNullException();
+			if (count < 1)
+				throw new ArgumentOutOfRangeException();
+
 			_goods.Add(good, count);
 		}
 		

@@ -1,8 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace NapilnikStudyCourse.Chapter1_Lobby
 {
@@ -12,13 +8,15 @@ namespace NapilnikStudyCourse.Chapter1_Lobby
 		[Test]
 		public void CheckAllSimulation()
 		{
-			Player p1 = new Player();
-			Player p2 = new Player();
-			Player p3 = new Player();
+			Player p1 = new Player("p1");
+			Player p2 = new Player("p2");
+			Player p3 = new Player("p3");
 			
 			var r1 = p1.CreateRoom(2);
 			
-			//p2.TryConnectToRoom(r1);
+			p2.TryConnectToRoom(r1);
+
+			p1.SendMassage("пошумим");
 			
 			Assert.AreEqual(1, r1.Players.Count);
 		}

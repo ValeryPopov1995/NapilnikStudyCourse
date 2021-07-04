@@ -4,12 +4,13 @@ namespace NapilnikStudyCourse.Chapter1_Store
 {
 	public class Shop
 	{
-		readonly Warehouse _warehouse;
-		Cart _cart;
+		private readonly Warehouse _warehouse;
+		private Cart _cart;
 		
 		public Shop(Warehouse warehouse)
 		{
-			if (warehouse == null) throw new ArgumentNullException();
+			if (warehouse == null)
+				throw new ArgumentNullException();
 			
 			_warehouse = warehouse;
 		}

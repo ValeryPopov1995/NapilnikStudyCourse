@@ -10,15 +10,21 @@ namespace NapilnikStudyCourse.Chapter1_Store
 		
 		public Cart(Warehouse warehouse)
 		{
+			if (warehouse == null)
+				throw new ArgumentNullException();
+
 			_warehouse = warehouse;
 		}
 		
 		public void Add(Good good, int count)
 		{
-			if (good == null) throw new ArgumentNullException();
+			if (good == null)
+				throw new ArgumentNullException();
 			
-			if (_warehouse.HasRequestingGoods(good,count)) _goods.Add(good, count);
-			else throw new Exception("на складе нет нужного количества запрашиваемых товаров");
+			if (_warehouse.HasRequestingGoods(good,count))
+				_goods.Add(good, count);
+			else
+				throw new Exception("на складе нет нужного количества запрашиваемых товаров");
 		}
 		
 		public void ShowRequestGoods()

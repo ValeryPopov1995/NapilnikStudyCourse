@@ -11,7 +11,8 @@ namespace NapilnikStudyCourse.Chapter1_Store
 		
 		public Good(string name)
 		{
-			if (name == null) throw new ArgumentNullException();
+			if (name == null)
+				throw new ArgumentNullException();
 			
 			Name = name;
 		}

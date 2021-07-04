@@ -4,7 +4,7 @@ namespace NapilnikStudyCourse.Chapter1_BotWeapon
 {
 	public class Bot
 	{
-		readonly Weapon _weapon;
+		private readonly Weapon _weapon;
 		
 		public Bot(Weapon weapon)
 		{
@@ -13,6 +13,8 @@ namespace NapilnikStudyCourse.Chapter1_BotWeapon
 		
 		public void OnSeePlayer(Player player)
 		{
+			if (player.Dead) return;
+
 			_weapon.Fire(player);
 		}
 	}
