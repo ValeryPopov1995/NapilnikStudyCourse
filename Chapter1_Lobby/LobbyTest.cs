@@ -3,7 +3,7 @@
 namespace NapilnikStudyCourse.Chapter1_Lobby
 {
 	[TestFixture]
-	public class UnitTest
+	public class LobbyTest
 	{
 		[Test]
 		public void CheckAllSimulation()

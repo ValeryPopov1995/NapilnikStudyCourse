@@ -34,6 +34,7 @@
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="NUnit.Framework">
       <HintPath>$(SharpDevelopBinPath)\Tools\NUnit\NUnit.Framework.dll</HintPath>
     </Reference>
@@ -56,27 +57,30 @@
   <ItemGroup>
     <Compile Include="Chapter1_BotWeapon\Bot.cs" />
     <Compile Include="Chapter1_BotWeapon\Player.cs" />
-    <Compile Include="Chapter1_BotWeapon\UnitTest.cs" />
+    <Compile Include="Chapter1_BotWeapon\BotWeaponTest.cs" />
     <Compile Include="Chapter1_BotWeapon\Weapon.cs" />
     <Compile Include="Chapter1_Lobby\Player.cs" />
     <Compile Include="Chapter1_Lobby\Room.cs" />
-    <Compile Include="Chapter1_Lobby\UnitTest.cs" />
+    <Compile Include="Chapter1_Lobby\LobbyTest.cs" />
     <Compile Include="Chapter1_Store\Cart.cs" />
     <Compile Include="Chapter1_Store\Good.cs" />
     <Compile Include="Chapter1_Store\GoodsDictionary.cs" />
     <Compile Include="Chapter1_Store\Shop.cs" />
-    <Compile Include="Chapter1_Store\UnitTest.cs" />
+    <Compile Include="Chapter1_Store\StoreTest.cs" />
     <Compile Include="Chapter1_Store\Warehouse.cs" />
+    <Compile Include="Chapter2_Logging\ConsoleLogger.cs" />
+    <Compile Include="Chapter2_Logging\FileLogger.cs" />
+    <Compile Include="Chapter2_Logging\FridayLoggerDecorator.cs" />
+    <Compile Include="Chapter2_Logging\ILogger.cs" />
+    <Compile Include="Chapter2_Logging\LoggerChain.cs" />
+    <Compile Include="Chapter2_Logging\LoggingTest.cs" />
+    <Compile Include="Chapter2_Logging\Pathfinder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Chapter1_BotWeapon" />
-    <Folder Include="Chapter1_Store" />
-    <Folder Include="Chapter1_Lobby" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

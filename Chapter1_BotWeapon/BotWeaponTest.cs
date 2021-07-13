@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace NapilnikStudyCourse.Chapter1_BotWeapon
 {
 	[TestFixture]
-	public class UnitTest
+	public class BotWeaponTest
 	{
 		[Test]
 		public void CanIFire()

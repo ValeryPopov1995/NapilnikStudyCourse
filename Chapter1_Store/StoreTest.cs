@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace NapilnikStudyCourse.Chapter1_Store
 {
 	[TestFixture]
-	public class UnitTest
+	public class StoreTest
 	{
 		[Test]
 		[ExpectedException(typeof(Exception))]

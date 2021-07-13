@@ -1,7 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-# SharpDevelop 5.1
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NapilnikStudyCourse", "NapilnikStudyCourse.csproj", "{BF937BC3-891E-4C07-9D70-59AE355CDD68}"
 EndProject
 Global
@@ -14,5 +15,11 @@ Global
 		{BF937BC3-891E-4C07-9D70-59AE355CDD68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF937BC3-891E-4C07-9D70-59AE355CDD68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF937BC3-891E-4C07-9D70-59AE355CDD68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B184186-5A13-434C-9F4C-87577469086D}
 	EndGlobalSection
 EndGlobal
