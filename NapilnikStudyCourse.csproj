@@ -80,6 +80,7 @@
     <Compile Include="Chapter2_Logging\LoggerChain.cs" />
     <Compile Include="Chapter2_Logging\LoggingTest.cs" />
     <Compile Include="Chapter2_Logging\Pathfinder.cs" />
+    <Compile Include="CleanCode\Standard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
