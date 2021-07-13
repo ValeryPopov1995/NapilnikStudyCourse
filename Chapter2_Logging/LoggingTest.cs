@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace NapilnikStudyCourse.Chapter2_Logging
 {
-    [TestFixture]
-    class LoggingTest
+    class Tests
     {
         [Test]
         public void UseCase()

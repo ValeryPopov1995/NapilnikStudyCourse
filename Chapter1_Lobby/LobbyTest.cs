@@ -18,7 +18,7 @@ namespace NapilnikStudyCourse.Chapter1_Lobby
 
 			p1.SendMassage("пошумим");
 			
-			Assert.AreEqual(1, r1.Players.Count);
+			Assert.AreEqual(2, r1.Players.Count);
 		}
 	}
 }

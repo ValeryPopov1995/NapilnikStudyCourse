@@ -17,16 +17,6 @@ namespace NapilnikStudyCourse.Chapter1_BotWeapon
 		}
 		
 		[Test]
-		public void NotNegativeDamage()
-		{
-			var p = new Player(10);
-			var w = new Weapon(-1, -5);
-			
-			w.Fire(p);
-			Assert.AreEqual(0,w.Damage);
-		}
-		
-		[Test]
 		public void ComplexSimulation()
         {
 			var p = new Player(2);

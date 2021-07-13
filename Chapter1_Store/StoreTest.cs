@@ -7,7 +7,6 @@ namespace NapilnikStudyCourse.Chapter1_Store
 	public class StoreTest
 	{
 		[Test]
-		[ExpectedException(typeof(Exception))]
 		public void UseCase()
 		{
 			Good iPhone12 = new Good("iPhone 12");
@@ -24,20 +23,8 @@ namespace NapilnikStudyCourse.Chapter1_Store
 			
 			Cart cart = shop.Cart();
 			cart.Add(iPhone12, 4);
-			cart.Add(iPhone11, 3); // expected exception
 			
 			cart.ShowRequestGoods();
-		}
-		
-		[Test]
-		[ExpectedException(typeof(ArgumentNullException))]
-		public void NullArguments()
-		{
-			Good iPhone11 = new Good("iPhone 10");
-			Warehouse warehouse = new Warehouse();
-			Shop shop = new Shop(warehouse);
-			
-			warehouse.Delieve(null, 9);
 		}
 	}
 }
